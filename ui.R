@@ -2,7 +2,7 @@
 
 sidebar <- dashboardSidebar(
   width = 250,
-  sidebarUserPanel("Michael Tarino"), 
+  sidebarUserPanel("Michael Tarino"),
   sidebarMenu(
     menuItem("Maps", tabName = "maps", icon = icon("fire")),
     menuItem("Graphs", tabName = "graphs", icon = icon("list-alt"),
