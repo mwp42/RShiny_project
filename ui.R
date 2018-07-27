@@ -1,6 +1,4 @@
 #ui.R
-library(shiny)
-library(shinydashboard)
 
 sidebar <- dashboardSidebar(
   width = 250,
@@ -12,8 +10,7 @@ sidebar <- dashboardSidebar(
               menuItem("Histogram: Trade", tabName = "histogram", icon=icon('bar-chart-o'))
     ),
     menuItem("Statistics", tabName = "statistics", icon = icon("gear")),
-    menuItem("Table", tabName = "table", icon = icon("table")),
-    menuItem(img(src = "http://www.commoditytrademantra.com/wp-content/uploads/2018/01/commodities-750x500.jpg",height = 200, width = 200), tabName = "maps")
+    menuItem("Table", tabName = "table", icon = icon("table"))
   )
 )
 
