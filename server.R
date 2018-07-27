@@ -1,8 +1,4 @@
 #server.R
-library(shiny)
-library(dplyr)
-library(tidyr)
-library(ggplot2)
 
 function(input, output, session) {
   
@@ -45,8 +41,8 @@ function(input, output, session) {
     commodity_T5%>%
       group_by(country, year.trade)%>%
       summarize(sum.trade=sum(trade.in.usd))%>%
-      ggplot(aes(x=sum.trade)) + geom_histogram(aes(fill=country), color="black", bins = 40, position = position_stack(reverse=TRUE)) + coord_cartesian(xlim=c(5000000,4500000000),ylim=c(0,25)) + 
-      xlab("Sum of Commodity transactions grouped by Year") + ylab("Count")
+      ggplot(aes(x=sum.trade)) + geom_histogram(aes(fill=country), color="black", bins = 40, position = position_stack(reverse=TRUE)) + coord_cartesian(xlim=c(66000000000,5e+12),ylim=c(0,15)) + ##from 5000000, 4500000000
+      xlab("Sum of Commodity transactions in USD grouped by Year") + ylab("Count")
   })
   
   ########  STATISTICS ########
